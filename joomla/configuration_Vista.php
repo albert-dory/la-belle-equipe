@@ -14,7 +14,7 @@ class JConfig {
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
 	public $user = 'root';
-	public $password = '44300 Nantes';
+	public $password = '';
 	public $db = 'w3b';
 	public $dbprefix = 'cmp1x_';
 	public $live_site = '';
@@ -53,8 +53,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/var/www/htdocs/la-belle-equipe/joomla/logs';
-	public $tmp_path = '/var/www/htdocs/la-belle-equipe/joomla/tmp';
+	public $log_path = 'C:\\xampp\\htdocs\\la-belle-equipe\\joomla/logs';
+	public $tmp_path = 'C:\\xampp\\htdocs\\la-belle-equipe\\joomla/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 }

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le : Ven 06 Juillet 2012 à 16:58
--- Version du serveur: 5.5.16
--- Version de PHP: 5.3.8
+-- Host: localhost
+-- Generation Time: Jul 09, 2012 at 06:50 PM
+-- Server version: 5.1.61
+-- PHP Version: 5.3.10-2
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `w3b`
+-- Database: `w3b`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_assets`
+-- Table structure for table `cmp1x_assets`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_assets` (
@@ -39,53 +39,54 @@ CREATE TABLE IF NOT EXISTS `cmp1x_assets` (
   UNIQUE KEY `idx_asset_name` (`name`),
   KEY `idx_lft_rgt` (`lft`,`rgt`),
   KEY `idx_parent_id` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=37 ;
 
 --
--- Contenu de la table `cmp1x_assets`
+-- Dumping data for table `cmp1x_assets`
 --
 
 INSERT INTO `cmp1x_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 1, 69, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
+(1, 0, 1, 71, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 (5, 1, 9, 10, 1, 'com_checkin', 'com_checkin', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
 (6, 1, 11, 12, 1, 'com_config', 'com_config', '{}'),
 (7, 1, 13, 16, 1, 'com_contact', 'com_contact', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(8, 1, 17, 22, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(9, 1, 23, 24, 1, 'com_cpanel', 'com_cpanel', '{}'),
-(10, 1, 25, 26, 1, 'com_installer', 'com_installer', '{"core.admin":[],"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
-(11, 1, 27, 28, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(12, 1, 29, 30, 1, 'com_login', 'com_login', '{}'),
-(13, 1, 31, 32, 1, 'com_mailto', 'com_mailto', '{}'),
-(14, 1, 33, 34, 1, 'com_massmail', 'com_massmail', '{}'),
-(15, 1, 35, 36, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
-(16, 1, 37, 38, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(17, 1, 39, 40, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
-(18, 1, 41, 42, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(19, 1, 43, 46, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(20, 1, 47, 48, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
-(21, 1, 49, 50, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
-(22, 1, 51, 52, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(23, 1, 53, 54, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(24, 1, 55, 58, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(25, 1, 59, 62, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
-(26, 1, 63, 64, 1, 'com_wrapper', 'com_wrapper', '{}'),
-(27, 8, 18, 21, 2, 'com_content.category.2', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(8, 1, 17, 24, 1, 'com_content', 'com_content', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(9, 1, 25, 26, 1, 'com_cpanel', 'com_cpanel', '{}'),
+(10, 1, 27, 28, 1, 'com_installer', 'com_installer', '{"core.admin":[],"core.manage":{"7":0},"core.delete":{"7":0},"core.edit.state":{"7":0}}'),
+(11, 1, 29, 30, 1, 'com_languages', 'com_languages', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(12, 1, 31, 32, 1, 'com_login', 'com_login', '{}'),
+(13, 1, 33, 34, 1, 'com_mailto', 'com_mailto', '{}'),
+(14, 1, 35, 36, 1, 'com_massmail', 'com_massmail', '{}'),
+(15, 1, 37, 38, 1, 'com_media', 'com_media', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":{"5":1}}'),
+(16, 1, 39, 40, 1, 'com_menus', 'com_menus', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(17, 1, 41, 42, 1, 'com_messages', 'com_messages', '{"core.admin":{"7":1},"core.manage":{"7":1}}'),
+(18, 1, 43, 44, 1, 'com_modules', 'com_modules', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(19, 1, 45, 48, 1, 'com_newsfeeds', 'com_newsfeeds', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(20, 1, 49, 50, 1, 'com_plugins', 'com_plugins', '{"core.admin":{"7":1},"core.manage":[],"core.edit":[],"core.edit.state":[]}'),
+(21, 1, 51, 52, 1, 'com_redirect', 'com_redirect', '{"core.admin":{"7":1},"core.manage":[]}'),
+(22, 1, 53, 54, 1, 'com_search', 'com_search', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(23, 1, 55, 56, 1, 'com_templates', 'com_templates', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(24, 1, 57, 60, 1, 'com_users', 'com_users', '{"core.admin":{"7":1},"core.manage":[],"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(25, 1, 61, 64, 1, 'com_weblinks', 'com_weblinks', '{"core.admin":{"7":1},"core.manage":{"6":1},"core.create":{"3":1},"core.delete":[],"core.edit":{"4":1},"core.edit.state":{"5":1},"core.edit.own":[]}'),
+(26, 1, 65, 66, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(27, 8, 18, 23, 2, 'com_content.category.2', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(30, 19, 44, 45, 2, 'com_newsfeeds.category.5', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(31, 25, 60, 61, 2, 'com_weblinks.category.6', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
-(32, 24, 56, 57, 1, 'com_users.notes.category.7', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
-(33, 1, 65, 66, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
-(34, 1, 67, 68, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
-(35, 27, 19, 20, 3, 'com_content.article.1', 'Ceci est une belle page de test', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}');
+(30, 19, 46, 47, 2, 'com_newsfeeds.category.5', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(31, 25, 62, 63, 2, 'com_weblinks.category.6', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[],"core.edit.own":[]}'),
+(32, 24, 58, 59, 1, 'com_users.notes.category.7', 'Non catégorisé', '{"core.create":[],"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(33, 1, 67, 68, 1, 'com_finder', 'com_finder', '{"core.admin":{"7":1},"core.manage":{"6":1}}'),
+(34, 1, 69, 70, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{"core.admin":[],"core.manage":[],"core.delete":[],"core.edit.state":[]}'),
+(35, 27, 19, 20, 3, 'com_content.article.1', 'Ceci est une belle page de test', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}'),
+(36, 27, 21, 22, 3, 'com_content.article.2', 'Quoi ? Un deuxième article factice ?', '{"core.delete":[],"core.edit":[],"core.edit.state":[]}');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_associations`
+-- Table structure for table `cmp1x_associations`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_associations` (
@@ -99,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_associations` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_banners`
+-- Table structure for table `cmp1x_banners`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_banners` (
@@ -143,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_banners` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_banner_clients`
+-- Table structure for table `cmp1x_banner_clients`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_banner_clients` (
@@ -169,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_banner_clients` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_banner_tracks`
+-- Table structure for table `cmp1x_banner_tracks`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_banner_tracks` (
@@ -186,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_banner_tracks` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_categories`
+-- Table structure for table `cmp1x_categories`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_categories` (
@@ -227,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_categories` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
--- Contenu de la table `cmp1x_categories`
+-- Dumping data for table `cmp1x_categories`
 --
 
 INSERT INTO `cmp1x_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `extension`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `modified_user_id`, `modified_time`, `hits`, `language`) VALUES
@@ -242,7 +243,7 @@ INSERT INTO `cmp1x_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `le
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_contact_details`
+-- Table structure for table `cmp1x_contact_details`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_contact_details` (
@@ -302,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_contact_details` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_content`
+-- Table structure for table `cmp1x_content`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_content` (
@@ -349,19 +350,20 @@ CREATE TABLE IF NOT EXISTS `cmp1x_content` (
   KEY `idx_featured_catid` (`featured`,`catid`),
   KEY `idx_language` (`language`),
   KEY `idx_xreference` (`xreference`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `cmp1x_content`
+-- Dumping data for table `cmp1x_content`
 --
 
 INSERT INTO `cmp1x_content` (`id`, `asset_id`, `title`, `alias`, `title_alias`, `introtext`, `fulltext`, `state`, `sectionid`, `mask`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `parentid`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `xreference`) VALUES
-(1, 35, 'Ceci est une belle page de test', 'page-test', '', '<p>Oui, ceci est une belle page de test. Lorem ipsum dolor sit amet, perfecto constituam mel no. Porro ponderum tractatos ex sea, aperiam legendos vel cu. Et sed audiam argumentum ullamcorper, per cu labore perpetua. Facer mollis platonem vix ea, cu vidisse antiopam duo.<br /><br />Pro cu utroque sententiae. Ea qui etiam commodo, rationibus expetendis assueverit ne mel. Atqui intellegam nec eu, vis ut nusquam oportere, vis alia quaeque in. Pri idque placerat an, at eam detraxit oportere constituam. Ad sit tale prima virtute, id ipsum numquam vis, duo ad lorem epicuri. Duo libris maiorum te, nam enim blandit ea, eum vero brute legendos ea. Cum sadipscing efficiantur ei.<br /><br />Omnis quaeque eam ea. Te salutandi efficiantur eos. Quod minimum has ut. In everti petentium usu, harum saperet ea mei. Vel te singulis evertitur.<br /><br />Cum laudem inimicus ad, has ex possim eligendi qualisque, errem eleifend qui no. Rebum nemore te pri, vim nostrum noluisse voluptaria ex. Ius cu prima nostrud quaestio, eius laudem soluta mel in. Eam in case error singulis, duo ad viris salutandi, pri ne affert integre. Ius dicat animal id, cu elitr epicurei quo, ad nulla nostro postulant pro.<br /><br />Virtute vivendum complectitur ne pro, percipit vituperata ius te. Te per homero tacimates disputationi, veri eligendi duo ne. His vide urbanitas ne, mutat molestie an nam, quo molestiae cotidieque at. Prima debet viderer sed eu, mei adhuc qualisque deseruisse et, mel in petentium instructior. Ei nobis consetetur repudiandae qui, cibo oratio officiis est ut. Cu nec malorum erroribus complectitur, altera eirmod ei vis.</p>', '', 1, 0, 0, 2, '2012-07-06 14:20:17', 343, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2012-07-06 14:20:17', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 1, '*', '');
+(1, 35, 'Ceci est une belle page de test', 'page-test', '', '<p>Oui, ceci est une belle page de test. Lorem ipsum dolor sit amet, perfecto constituam mel no. Porro ponderum tractatos ex sea, aperiam legendos vel cu. Et sed audiam argumentum ullamcorper, per cu labore perpetua. Facer mollis platonem vix ea, cu vidisse antiopam duo.<br /><br />Pro cu utroque sententiae. Ea qui etiam commodo, rationibus expetendis assueverit ne mel. Atqui intellegam nec eu, vis ut nusquam oportere, vis alia quaeque in. Pri idque placerat an, at eam detraxit oportere constituam. Ad sit tale prima virtute, id ipsum numquam vis, duo ad lorem epicuri. Duo libris maiorum te, nam enim blandit ea, eum vero brute legendos ea. Cum sadipscing efficiantur ei.<br /><br />Omnis quaeque eam ea. Te salutandi efficiantur eos. Quod minimum has ut. In everti petentium usu, harum saperet ea mei. Vel te singulis evertitur.<br /><br />Cum laudem inimicus ad, has ex possim eligendi qualisque, errem eleifend qui no. Rebum nemore te pri, vim nostrum noluisse voluptaria ex. Ius cu prima nostrud quaestio, eius laudem soluta mel in. Eam in case error singulis, duo ad viris salutandi, pri ne affert integre. Ius dicat animal id, cu elitr epicurei quo, ad nulla nostro postulant pro.<br /><br />Virtute vivendum complectitur ne pro, percipit vituperata ius te. Te per homero tacimates disputationi, veri eligendi duo ne. His vide urbanitas ne, mutat molestie an nam, quo molestiae cotidieque at. Prima debet viderer sed eu, mei adhuc qualisque deseruisse et, mel in petentium instructior. Ei nobis consetetur repudiandae qui, cibo oratio officiis est ut. Cu nec malorum erroribus complectitur, altera eirmod ei vis.</p>', '', 1, 0, 0, 2, '2012-07-06 14:20:17', 343, '', '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '2012-07-06 14:20:17', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 1, 0, 1, '', '', 1, 1, '{"robots":"","author":"","rights":"","xreference":""}', 1, '*', ''),
+(2, 36, 'Quoi ? Un deuxième article factice ?', 'quoi-un-deuxieme-article-actice', '', '<p>Oui. tout est dans le titre.</p>\r\n<div id="TheTexte" class="Texte">\r\n<p>Novitates autem si spem adferunt, ut tamquam in herbis non fallacibus fructus appareat, non sunt illae quidem repudiandae, vetustas tamen suo loco conservanda; maxima est enim vis vetustatis et consuetudinis. Quin in ipso equo, cuius modo feci mentionem, si nulla res impediat, nemo est, quin eo, quo consuevit, libentius utatur quam intractato et novo. Nec vero in hoc quod est animal, sed in iis etiam quae sunt inanima, consuetudo valet, cum locis ipsis delectemur, montuosis etiam et silvestribus, in quibus diutius commorati sumus.</p>\r\n<p>Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.</p>\r\n<p>Excogitatum est super his, ut homines quidam ignoti, vilitate ipsa parum cavendi ad colligendos rumores per Antiochiae latera cuncta destinarentur relaturi quae audirent. hi peragranter et dissimulanter honoratorum circulis adsistendo pervadendoque divites domus egentium habitu quicquid noscere poterant vel audire latenter intromissi per posticas in regiam nuntiabant, id observantes conspiratione concordi, ut fingerent quaedam et cognita duplicarent in peius, laudes vero supprimerent Caesaris, quas invitis conpluribus formido malorum inpendentium exprimebat.</p>\r\n<p>Dum haec in oriente aguntur, Arelate hiemem agens Constantius post theatralis ludos atque circenses ambitioso editos apparatu diem sextum idus Octobres, qui imperii eius annum tricensimum terminabat, insolentiae pondera gravius librans, siquid dubium deferebatur aut falsum, pro liquido accipiens et conperto, inter alia excarnificatum Gerontium Magnentianae comitem partis exulari maerore multavit.</p>\r\n<p>Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discursantes quicquid inveniri poterat momento temporis parvi vastabant milvorum rapacium similes, qui si praedam dispexerint celsius, volatu rapiunt celeri, aut nisi impetraverint, non inmorantur.</p>\r\n<p>Sed fruatur sane hoc solacio atque hanc insignem ignominiam, quoniam uni praeter se inusta sit, putet esse leviorem, dum modo, cuius exemplo se consolatur, eius exitum expectet, praesertim cum in Albucio nec Pisonis libidines nec audacia Gabini fuerit ac tamen hac una plaga conciderit, ignominia senatus.</p>\r\n<p>Et olim licet otiosae sint tribus pacataeque centuriae et nulla suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes terrarum, ut domina suscipitur et regina et ubique patrum reverenda cum auctoritate canities populique Romani nomen circumspectum et verecundum.</p>\r\n<p>Duplexque isdem diebus acciderat malum, quod et Theophilum insontem atrox interceperat casus, et Serenianus dignus exsecratione cunctorum, innoxius, modo non reclamante publico vigore, discessit.</p>\r\n<p>Proinde concepta rabie saeviore, quam desperatio incendebat et fames, amplificatis viribus ardore incohibili in excidium urbium matris Seleuciae efferebantur, quam comes tuebatur Castricius tresque legiones bellicis sudoribus induratae.</p>\r\n<p>Itaque verae amicitiae difficillime reperiuntur in iis qui in honoribus reque publica versantur; ubi enim istum invenias qui honorem amici anteponat suo? Quid? Haec ut omittam, quam graves, quam difficiles plerisque videntur calamitatum societates! Ad quas non est facile inventu qui descendant. Quamquam Ennius recte.</p>\r\n<p>Homines enim eruditos et sobrios ut infaustos et inutiles vitant, eo quoque accedente quod et nomenclatores adsueti haec et talia venditare, mercede accepta lucris quosdam et prandiis inserunt subditicios ignobiles et obscuros.</p>\r\n<p>Hoc inmaturo interitu ipse quoque sui pertaesus excessit e vita aetatis nono anno atque vicensimo cum quadriennio imperasset. natus apud Tuscos in Massa Veternensi, patre Constantio Constantini fratre imperatoris, matreque Galla sorore Rufini et Cerealis, quos trabeae consulares nobilitarunt et praefecturae.</p>\r\n<p>Haec igitur Epicuri non probo, inquam. De cetero vellem equidem aut ipse doctrinis fuisset instructior est enim, quod tibi ita videri necesse est, non satis politus iis artibus, quas qui tenent, eruditi appellantur aut ne deterruisset alios a studiis. quamquam te quidem video minime esse deterritum.</p>\r\n<p>Omitto iuris dictionem in libera civitate contra leges senatusque consulta; caedes relinquo; libidines praetereo, quarum acerbissimum extat indicium et ad insignem memoriam turpitudinis et paene ad iustum odium imperii nostri, quod constat nobilissimas virgines se in puteos abiecisse et morte voluntaria necessariam turpitudinem depulisse. Nec haec idcirco omitto, quod non gravissima sint, sed quia nunc sine teste dico.</p>\r\n<p>Sin autem ad adulescentiam perduxissent, dirimi tamen interdum contentione vel uxoriae condicionis vel commodi alicuius, quod idem adipisci uterque non posset. Quod si qui longius in amicitia provecti essent, tamen saepe labefactari, si in honoris contentionem incidissent; pestem enim nullam maiorem esse amicitiis quam in plerisque pecuniae cupiditatem, in optimis quibusque honoris certamen et gloriae; ex quo inimicitias maximas saepe inter amicissimos exstitisse.</p>\r\n</div>\r\n<p> </p>', '', 1, 0, 0, 2, '2012-07-09 16:48:57', 343, '', '2012-07-09 16:49:45', 343, 0, '0000-00-00 00:00:00', '2012-07-09 16:48:57', '0000-00-00 00:00:00', '{"image_intro":"","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}', '{"urla":null,"urlatext":"","targeta":"","urlb":null,"urlbtext":"","targetb":"","urlc":null,"urlctext":"","targetc":""}', '{"show_title":"","link_titles":"","show_intro":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_icons":"","show_print_icon":"","show_email_icon":"","show_vote":"","show_hits":"","show_noauth":"","urls_position":"","alternative_readmore":"","article_layout":"","show_publishing_options":"","show_article_options":"","show_urls_images_backend":"","show_urls_images_frontend":""}', 2, 0, 0, '', '', 1, 0, '{"robots":"","author":"","rights":"","xreference":""}', 0, '*', '');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_content_frontpage`
+-- Table structure for table `cmp1x_content_frontpage`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_content_frontpage` (
@@ -371,7 +373,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_content_frontpage` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `cmp1x_content_frontpage`
+-- Dumping data for table `cmp1x_content_frontpage`
 --
 
 INSERT INTO `cmp1x_content_frontpage` (`content_id`, `ordering`) VALUES
@@ -380,7 +382,7 @@ INSERT INTO `cmp1x_content_frontpage` (`content_id`, `ordering`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_content_rating`
+-- Table structure for table `cmp1x_content_rating`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_content_rating` (
@@ -394,7 +396,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_content_rating` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_core_log_searches`
+-- Table structure for table `cmp1x_core_log_searches`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_core_log_searches` (
@@ -405,7 +407,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_core_log_searches` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_extensions`
+-- Table structure for table `cmp1x_extensions`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_extensions` (
@@ -433,7 +435,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_extensions` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10005 ;
 
 --
--- Contenu de la table `cmp1x_extensions`
+-- Dumping data for table `cmp1x_extensions`
 --
 
 INSERT INTO `cmp1x_extensions` (`extension_id`, `name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`, `params`, `custom_data`, `system_data`, `checked_out`, `checked_out_time`, `ordering`, `state`) VALUES
@@ -570,7 +572,7 @@ INSERT INTO `cmp1x_extensions` (`extension_id`, `name`, `type`, `element`, `fold
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_filters`
+-- Table structure for table `cmp1x_finder_filters`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_filters` (
@@ -594,7 +596,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_filters` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links`
+-- Table structure for table `cmp1x_finder_links`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links` (
@@ -629,7 +631,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms0`
+-- Table structure for table `cmp1x_finder_links_terms0`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms0` (
@@ -644,7 +646,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms0` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms1`
+-- Table structure for table `cmp1x_finder_links_terms1`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms1` (
@@ -659,7 +661,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms1` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms2`
+-- Table structure for table `cmp1x_finder_links_terms2`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms2` (
@@ -674,7 +676,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms2` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms3`
+-- Table structure for table `cmp1x_finder_links_terms3`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms3` (
@@ -689,7 +691,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms3` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms4`
+-- Table structure for table `cmp1x_finder_links_terms4`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms4` (
@@ -704,7 +706,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms4` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms5`
+-- Table structure for table `cmp1x_finder_links_terms5`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms5` (
@@ -719,7 +721,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms5` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms6`
+-- Table structure for table `cmp1x_finder_links_terms6`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms6` (
@@ -734,7 +736,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms6` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms7`
+-- Table structure for table `cmp1x_finder_links_terms7`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms7` (
@@ -749,7 +751,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms7` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms8`
+-- Table structure for table `cmp1x_finder_links_terms8`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms8` (
@@ -764,7 +766,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms8` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_terms9`
+-- Table structure for table `cmp1x_finder_links_terms9`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms9` (
@@ -779,7 +781,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_terms9` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_termsa`
+-- Table structure for table `cmp1x_finder_links_termsa`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsa` (
@@ -794,7 +796,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsa` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_termsb`
+-- Table structure for table `cmp1x_finder_links_termsb`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsb` (
@@ -809,7 +811,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsb` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_termsc`
+-- Table structure for table `cmp1x_finder_links_termsc`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsc` (
@@ -824,7 +826,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsc` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_termsd`
+-- Table structure for table `cmp1x_finder_links_termsd`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsd` (
@@ -839,7 +841,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsd` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_termse`
+-- Table structure for table `cmp1x_finder_links_termse`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termse` (
@@ -854,7 +856,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termse` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_links_termsf`
+-- Table structure for table `cmp1x_finder_links_termsf`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsf` (
@@ -869,7 +871,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_links_termsf` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_taxonomy`
+-- Table structure for table `cmp1x_finder_taxonomy`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_taxonomy` (
@@ -888,7 +890,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_taxonomy` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `cmp1x_finder_taxonomy`
+-- Dumping data for table `cmp1x_finder_taxonomy`
 --
 
 INSERT INTO `cmp1x_finder_taxonomy` (`id`, `parent_id`, `title`, `state`, `access`, `ordering`) VALUES
@@ -897,7 +899,7 @@ INSERT INTO `cmp1x_finder_taxonomy` (`id`, `parent_id`, `title`, `state`, `acces
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_taxonomy_map`
+-- Table structure for table `cmp1x_finder_taxonomy_map`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_taxonomy_map` (
@@ -911,7 +913,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_taxonomy_map` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_terms`
+-- Table structure for table `cmp1x_finder_terms`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_terms` (
@@ -933,7 +935,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_terms` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_terms_common`
+-- Table structure for table `cmp1x_finder_terms_common`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_terms_common` (
@@ -944,7 +946,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_terms_common` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `cmp1x_finder_terms_common`
+-- Dumping data for table `cmp1x_finder_terms_common`
 --
 
 INSERT INTO `cmp1x_finder_terms_common` (`term`, `language`) VALUES
@@ -1067,7 +1069,7 @@ INSERT INTO `cmp1x_finder_terms_common` (`term`, `language`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_tokens`
+-- Table structure for table `cmp1x_finder_tokens`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_tokens` (
@@ -1084,7 +1086,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_tokens` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_tokens_aggregate`
+-- Table structure for table `cmp1x_finder_tokens_aggregate`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_tokens_aggregate` (
@@ -1105,7 +1107,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_tokens_aggregate` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_finder_types`
+-- Table structure for table `cmp1x_finder_types`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_finder_types` (
@@ -1119,7 +1121,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_finder_types` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_languages`
+-- Table structure for table `cmp1x_languages`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_languages` (
@@ -1145,7 +1147,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_languages` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Contenu de la table `cmp1x_languages`
+-- Dumping data for table `cmp1x_languages`
 --
 
 INSERT INTO `cmp1x_languages` (`lang_id`, `lang_code`, `title`, `title_native`, `sef`, `image`, `description`, `metakey`, `metadesc`, `sitename`, `published`, `access`, `ordering`) VALUES
@@ -1155,7 +1157,7 @@ INSERT INTO `cmp1x_languages` (`lang_id`, `lang_code`, `title`, `title_native`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_menu`
+-- Table structure for table `cmp1x_menu`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_menu` (
@@ -1195,7 +1197,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_menu` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=102 ;
 
 --
--- Contenu de la table `cmp1x_menu`
+-- Dumping data for table `cmp1x_menu`
 --
 
 INSERT INTO `cmp1x_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `ordering`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
@@ -1226,7 +1228,7 @@ INSERT INTO `cmp1x_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_menu_types`
+-- Table structure for table `cmp1x_menu_types`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_menu_types` (
@@ -1239,7 +1241,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_menu_types` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Contenu de la table `cmp1x_menu_types`
+-- Dumping data for table `cmp1x_menu_types`
 --
 
 INSERT INTO `cmp1x_menu_types` (`id`, `menutype`, `title`, `description`) VALUES
@@ -1248,7 +1250,7 @@ INSERT INTO `cmp1x_menu_types` (`id`, `menutype`, `title`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_messages`
+-- Table structure for table `cmp1x_messages`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_messages` (
@@ -1268,7 +1270,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_messages` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_messages_cfg`
+-- Table structure for table `cmp1x_messages_cfg`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_messages_cfg` (
@@ -1281,7 +1283,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_messages_cfg` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_modules`
+-- Table structure for table `cmp1x_modules`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_modules` (
@@ -1309,7 +1311,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_modules` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
 
 --
--- Contenu de la table `cmp1x_modules`
+-- Dumping data for table `cmp1x_modules`
 --
 
 INSERT INTO `cmp1x_modules` (`id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
@@ -1332,7 +1334,7 @@ INSERT INTO `cmp1x_modules` (`id`, `title`, `note`, `content`, `ordering`, `posi
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_modules_menu`
+-- Table structure for table `cmp1x_modules_menu`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_modules_menu` (
@@ -1342,7 +1344,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_modules_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `cmp1x_modules_menu`
+-- Dumping data for table `cmp1x_modules_menu`
 --
 
 INSERT INTO `cmp1x_modules_menu` (`moduleid`, `menuid`) VALUES
@@ -1367,7 +1369,7 @@ INSERT INTO `cmp1x_modules_menu` (`moduleid`, `menuid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_newsfeeds`
+-- Table structure for table `cmp1x_newsfeeds`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_newsfeeds` (
@@ -1411,7 +1413,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_newsfeeds` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_overrider`
+-- Table structure for table `cmp1x_overrider`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_overrider` (
@@ -1425,7 +1427,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_overrider` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_redirect_links`
+-- Table structure for table `cmp1x_redirect_links`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_redirect_links` (
@@ -1446,7 +1448,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_redirect_links` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_schemas`
+-- Table structure for table `cmp1x_schemas`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_schemas` (
@@ -1456,7 +1458,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_schemas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `cmp1x_schemas`
+-- Dumping data for table `cmp1x_schemas`
 --
 
 INSERT INTO `cmp1x_schemas` (`extension_id`, `version_id`) VALUES
@@ -1465,7 +1467,7 @@ INSERT INTO `cmp1x_schemas` (`extension_id`, `version_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_session`
+-- Table structure for table `cmp1x_session`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_session` (
@@ -1484,17 +1486,17 @@ CREATE TABLE IF NOT EXISTS `cmp1x_session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `cmp1x_session`
+-- Dumping data for table `cmp1x_session`
 --
 
 INSERT INTO `cmp1x_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`, `usertype`) VALUES
-('1q7qi8m8rjiiprsm6aoa0e0821', 0, 0, '1341585615', '__default|a:9:{s:15:"session.counter";i:10;s:19:"session.timer.start";i:1341584437;s:18:"session.timer.last";i:1341584774;s:17:"session.timer.now";i:1341585615;s:22:"session.client.browser";s:67:"Mozilla/5.0 (Windows NT 6.0; rv:13.0) Gecko/20100101 Firefox/13.0.1";s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":1:{s:5:"users";O:8:"stdClass":1:{s:5:"login";O:8:"stdClass":1:{s:4:"form";O:8:"stdClass":2:{s:4:"data";a:0:{}s:6:"return";s:40:"http://localhost/la-belle-equipe/joomla/";}}}}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:1;s:2:"id";s:3:"343";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:23:"w3b@kyldia-software.com";s:8:"password";s:65:"dd4ea00b484b84556f7b8ffe19059790:XgZCEGHiL9zpWKV7yX5S0PwHIku1zprq";s:14:"password_clear";s:0:"";s:8:"usertype";s:10:"deprecated";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2012-07-06 14:17:16";s:13:"lastvisitDate";s:19:"2012-07-06 14:20:37";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\0*\0_authLevels";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"fb32c401b79d25879eca6f15d817748b";s:16:"com_mailto.links";a:1:{s:40:"caa7d9250d84c3231f5a19eed1017dbd5d8af740";O:8:"stdClass":2:{s:4:"link";s:78:"http://localhost/la-belle-equipe/joomla/index.php/2-non-categorise/1-page-test";s:6:"expiry";i:1341585615;}}}', 343, 'admin', ''),
-('r93665f6tpdj4tq6eh74tlctp0', 1, 0, '1341585877', '__default|a:8:{s:15:"session.counter";i:51;s:19:"session.timer.start";i:1341584426;s:18:"session.timer.last";i:1341585036;s:17:"session.timer.now";i:1341585876;s:22:"session.client.browser";s:67:"Mozilla/5.0 (Windows NT 6.0; rv:13.0) Gecko/20100101 Firefox/13.0.1";s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":5:{s:11:"application";O:8:"stdClass":1:{s:4:"lang";s:0:"";}s:13:"com_installer";O:8:"stdClass":2:{s:7:"message";s:0:"";s:17:"extension_message";s:0:"";}s:14:"com_categories";O:8:"stdClass":1:{s:10:"categories";O:8:"stdClass":1:{s:6:"filter";O:8:"stdClass":1:{s:9:"extension";s:11:"com_content";}}}s:13:"com_templates";O:8:"stdClass":2:{s:6:"styles";O:8:"stdClass":1:{s:10:"limitstart";i:0;}s:4:"edit";O:8:"stdClass":2:{s:5:"style";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}s:6:"source";O:8:"stdClass":2:{s:2:"id";s:28:"NTAwOmNzcy90ZW1wbGF0ZS5jc3M=";s:4:"data";N;}}}s:6:"editor";O:8:"stdClass":1:{s:6:"source";O:8:"stdClass":1:{s:6:"syntax";s:3:"css";}}}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:1;s:2:"id";s:3:"343";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:23:"w3b@kyldia-software.com";s:8:"password";s:65:"dd4ea00b484b84556f7b8ffe19059790:XgZCEGHiL9zpWKV7yX5S0PwHIku1zprq";s:14:"password_clear";s:0:"";s:8:"usertype";s:10:"deprecated";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2012-07-06 14:17:16";s:13:"lastvisitDate";s:19:"2012-07-06 14:20:40";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\0*\0_authLevels";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"a633578d7b93680961fde2a0dba3a730";}', 343, 'admin', '');
+('hp0m96mo4srn2gcnuv868mhjb7', 0, 0, '1341852585', '__default|a:9:{s:15:"session.counter";i:27;s:19:"session.timer.start";i:1341851720;s:18:"session.timer.last";i:1341852585;s:17:"session.timer.now";i:1341852585;s:22:"session.client.browser";s:64:"Mozilla/5.0 (X11; Linux i686; rv:5.0) Gecko/20100101 Firefox/5.0";s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":2:{s:5:"users";O:8:"stdClass":1:{s:5:"login";O:8:"stdClass":1:{s:4:"form";O:8:"stdClass":2:{s:4:"data";a:0:{}s:6:"return";s:47:"http://localhost/htdocs/la-belle-equipe/joomla/";}}}s:11:"com_content";O:8:"stdClass":1:{s:4:"edit";O:8:"stdClass":1:{s:7:"article";O:8:"stdClass":2:{s:2:"id";a:0:{}s:4:"data";N;}}}}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";b:1;s:2:"id";s:3:"343";s:4:"name";s:10:"Super User";s:8:"username";s:5:"admin";s:5:"email";s:23:"w3b@kyldia-software.com";s:8:"password";s:65:"dd4ea00b484b84556f7b8ffe19059790:XgZCEGHiL9zpWKV7yX5S0PwHIku1zprq";s:14:"password_clear";s:0:"";s:8:"usertype";s:10:"deprecated";s:5:"block";s:1:"0";s:9:"sendEmail";s:1:"1";s:12:"registerDate";s:19:"2012-07-06 14:17:16";s:13:"lastvisitDate";s:19:"2012-07-06 14:20:59";s:10:"activation";s:1:"0";s:6:"params";s:0:"";s:6:"groups";a:1:{i:8;s:1:"8";}s:5:"guest";i:0;s:13:"lastResetTime";s:19:"0000-00-00 00:00:00";s:10:"resetCount";s:1:"0";s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";a:2:{i:0;i:1;i:1;i:8;}s:14:"\0*\0_authLevels";a:4:{i:0;i:1;i:1;i:1;i:2;i:2;i:3;i:3;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}s:16:"com_mailto.links";a:2:{s:40:"d87ecdabaa0c085106f69436733a999043e31441";O:8:"stdClass":2:{s:4:"link";s:85:"http://localhost/htdocs/la-belle-equipe/joomla/index.php/2-non-categorise/1-page-test";s:6:"expiry";i:1341852585;}s:40:"5afb8be4b79c98ab89b241311a738d372c0810f6";O:8:"stdClass":2:{s:4:"link";s:107:"http://localhost/htdocs/la-belle-equipe/joomla/index.php/2-non-categorise/2-quoi-un-deuxieme-article-actice";s:6:"expiry";i:1341852585;}}s:13:"session.token";s:32:"5dc43c10761766e8d6fce76048110558";}', 343, 'admin', ''),
+('p2s8h15ucpnutohkpi41a67ne6', 1, 1, '1341852549', '__default|a:8:{s:15:"session.counter";i:1;s:19:"session.timer.start";i:1341852548;s:18:"session.timer.last";i:1341852548;s:17:"session.timer.now";i:1341852548;s:22:"session.client.browser";s:64:"Mozilla/5.0 (X11; Linux i686; rv:5.0) Gecko/20100101 Firefox/5.0";s:8:"registry";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:4:"user";O:5:"JUser":25:{s:9:"\0*\0isRoot";N;s:2:"id";i:0;s:4:"name";N;s:8:"username";N;s:5:"email";N;s:8:"password";N;s:14:"password_clear";s:0:"";s:8:"usertype";N;s:5:"block";N;s:9:"sendEmail";i:0;s:12:"registerDate";N;s:13:"lastvisitDate";N;s:10:"activation";N;s:6:"params";N;s:6:"groups";a:0:{}s:5:"guest";i:1;s:13:"lastResetTime";N;s:10:"resetCount";N;s:10:"\0*\0_params";O:9:"JRegistry":1:{s:7:"\0*\0data";O:8:"stdClass":0:{}}s:14:"\0*\0_authGroups";N;s:14:"\0*\0_authLevels";a:2:{i:0;i:1;i:1;i:1;}s:15:"\0*\0_authActions";N;s:12:"\0*\0_errorMsg";N;s:10:"\0*\0_errors";a:0:{}s:3:"aid";i:0;}s:13:"session.token";s:32:"bc32b120d84126af37f5498825b07e2c";}', 0, '', '');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_template_styles`
+-- Table structure for table `cmp1x_template_styles`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_template_styles` (
@@ -1510,7 +1512,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_template_styles` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- Contenu de la table `cmp1x_template_styles`
+-- Dumping data for table `cmp1x_template_styles`
 --
 
 INSERT INTO `cmp1x_template_styles` (`id`, `template`, `client_id`, `home`, `title`, `params`) VALUES
@@ -1523,7 +1525,7 @@ INSERT INTO `cmp1x_template_styles` (`id`, `template`, `client_id`, `home`, `tit
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_updates`
+-- Table structure for table `cmp1x_updates`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_updates` (
@@ -1547,7 +1549,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_updates` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_update_categories`
+-- Table structure for table `cmp1x_update_categories`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_update_categories` (
@@ -1562,7 +1564,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_update_categories` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_update_sites`
+-- Table structure for table `cmp1x_update_sites`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_update_sites` (
@@ -1576,18 +1578,18 @@ CREATE TABLE IF NOT EXISTS `cmp1x_update_sites` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Update Sites' AUTO_INCREMENT=4 ;
 
 --
--- Contenu de la table `cmp1x_update_sites`
+-- Dumping data for table `cmp1x_update_sites`
 --
 
 INSERT INTO `cmp1x_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`) VALUES
-(1, 'Joomla Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1341584336),
-(2, 'Joomla Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1341584336),
-(3, 'French Language Pack Updates', 'collection', 'http://update.joomla.fr/translationlist.xml', 1, 1341584336);
+(1, 'Joomla Core', 'collection', 'http://update.joomla.org/core/list.xml', 1, 1341852459),
+(2, 'Joomla Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 1341852459),
+(3, 'French Language Pack Updates', 'collection', 'http://update.joomla.fr/translationlist.xml', 1, 1341852459);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_update_sites_extensions`
+-- Table structure for table `cmp1x_update_sites_extensions`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_update_sites_extensions` (
@@ -1597,7 +1599,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_update_sites_extensions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Links extensions to update sites';
 
 --
--- Contenu de la table `cmp1x_update_sites_extensions`
+-- Dumping data for table `cmp1x_update_sites_extensions`
 --
 
 INSERT INTO `cmp1x_update_sites_extensions` (`update_site_id`, `extension_id`) VALUES
@@ -1608,7 +1610,7 @@ INSERT INTO `cmp1x_update_sites_extensions` (`update_site_id`, `extension_id`) V
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_usergroups`
+-- Table structure for table `cmp1x_usergroups`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_usergroups` (
@@ -1625,7 +1627,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_usergroups` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
--- Contenu de la table `cmp1x_usergroups`
+-- Dumping data for table `cmp1x_usergroups`
 --
 
 INSERT INTO `cmp1x_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
@@ -1641,7 +1643,7 @@ INSERT INTO `cmp1x_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_users`
+-- Table structure for table `cmp1x_users`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_users` (
@@ -1668,16 +1670,16 @@ CREATE TABLE IF NOT EXISTS `cmp1x_users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=344 ;
 
 --
--- Contenu de la table `cmp1x_users`
+-- Dumping data for table `cmp1x_users`
 --
 
 INSERT INTO `cmp1x_users` (`id`, `name`, `username`, `email`, `password`, `usertype`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`) VALUES
-(343, 'Super User', 'admin', 'w3b@kyldia-software.com', 'dd4ea00b484b84556f7b8ffe19059790:XgZCEGHiL9zpWKV7yX5S0PwHIku1zprq', 'deprecated', 0, 1, '2012-07-06 14:17:16', '2012-07-06 14:20:59', '0', '', '0000-00-00 00:00:00', 0);
+(343, 'Super User', 'admin', 'w3b@kyldia-software.com', 'dd4ea00b484b84556f7b8ffe19059790:XgZCEGHiL9zpWKV7yX5S0PwHIku1zprq', 'deprecated', 0, 1, '2012-07-06 14:17:16', '2012-07-09 16:49:08', '0', '', '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_user_notes`
+-- Table structure for table `cmp1x_user_notes`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_user_notes` (
@@ -1704,7 +1706,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_user_profiles`
+-- Table structure for table `cmp1x_user_profiles`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_user_profiles` (
@@ -1718,7 +1720,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_user_profiles` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_user_usergroup_map`
+-- Table structure for table `cmp1x_user_usergroup_map`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_user_usergroup_map` (
@@ -1728,7 +1730,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_user_usergroup_map` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `cmp1x_user_usergroup_map`
+-- Dumping data for table `cmp1x_user_usergroup_map`
 --
 
 INSERT INTO `cmp1x_user_usergroup_map` (`user_id`, `group_id`) VALUES
@@ -1737,7 +1739,7 @@ INSERT INTO `cmp1x_user_usergroup_map` (`user_id`, `group_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_viewlevels`
+-- Table structure for table `cmp1x_viewlevels`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_viewlevels` (
@@ -1750,7 +1752,7 @@ CREATE TABLE IF NOT EXISTS `cmp1x_viewlevels` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Contenu de la table `cmp1x_viewlevels`
+-- Dumping data for table `cmp1x_viewlevels`
 --
 
 INSERT INTO `cmp1x_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
@@ -1761,7 +1763,7 @@ INSERT INTO `cmp1x_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cmp1x_weblinks`
+-- Table structure for table `cmp1x_weblinks`
 --
 
 CREATE TABLE IF NOT EXISTS `cmp1x_weblinks` (
