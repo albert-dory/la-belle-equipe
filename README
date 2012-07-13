@@ -1,3 +1,11 @@
 Ceci est un fichier créé automatiquement puis édité à la main.
 Puis édité une deuxième fois pour voir.
 Enfin une troisième fois avec Eclipse.
+
+Joomla OK en ligne : http://design.kyldia-software.com/W3B/la-belle-equipe/joomla/
+Après deux ou trois nuits de sommeil perplexe, en deux secondes je règle le problème :
+* le login est "admin" et pas "root"
+* la connexion obligatoire est désactivée en mettant "non" à "site hors-ligne"
+
+C'est parti pour Wordpress...
+  
